@@ -1,5 +1,6 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:game/config/constants/strings.dart';
 import 'package:game/controllers/splash_controller.dart';
 import 'package:game/utilities/text_styles.dart';
 import 'package:get/get.dart';
@@ -20,7 +21,7 @@ class SplashScreen extends StatelessWidget {
               child: TypewriterAnimatedTextKit(
                 speed: Duration(milliseconds: 100),
                 isRepeatingAnimation: false,
-                text: ['game.tv'],
+                text: [AppStrings.GAME_TV],
                 textStyle: AppText.splash,
                 repeatForever: false,
                 onFinished: splashController.checkLoginState,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:game/config/constants/colors.dart';
 import 'package:game/config/constants/images.dart';
 import 'package:game/config/constants/keys.dart';
+import 'package:game/config/constants/strings.dart';
 import 'package:game/controllers/home_controller.dart';
 import 'package:game/controllers/login_controller.dart';
 import 'package:game/screens/home/widgets/game_view.dart';
@@ -77,7 +78,7 @@ class HomeScreen extends StatelessWidget {
                                             style:
                                                 AppText.rating(fontSize: 18)),
                                         TextSpan(
-                                            text: '  Elo Rating',
+                                            text: AppStrings.ELO_RATING,
                                             style: AppText.rating()),
                                       ]),
                                 ),
@@ -111,7 +112,7 @@ class HomeScreen extends StatelessWidget {
                                             text: '2250',
                                             style: AppText.statValue),
                                         TextSpan(
-                                          text: '\nTournaments\nPlayed',
+                                          text: AppStrings.TOURNAMENTS_PLAYED,
                                           style: AppText.statLabel,
                                         ),
                                       ]),
@@ -137,7 +138,7 @@ class HomeScreen extends StatelessWidget {
                                             text: '09',
                                             style: AppText.statValue),
                                         TextSpan(
-                                          text: '\nTournaments\nWon',
+                                          text: AppStrings.TOURNAMENTS_WON,
                                           style: AppText.statLabel,
                                         ),
                                       ]),
@@ -163,7 +164,7 @@ class HomeScreen extends StatelessWidget {
                                             text: '26%',
                                             style: AppText.statValue),
                                         TextSpan(
-                                          text: '\nWinning\nPercentage',
+                                          text: AppStrings.WINNING_PERCENTAGE,
                                           style: AppText.statLabel,
                                         ),
                                       ]),
@@ -174,7 +175,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       SizedBox(height: 24),
-                      Text('Recommended for you', style: AppText.name),
+                      Text(AppStrings.RECOMMENDED, style: AppText.name),
                       SizedBox(height: 16),
                       Obx(() => ListView.builder(
                             shrinkWrap: true,

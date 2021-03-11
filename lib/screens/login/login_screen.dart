@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:game/config/constants/strings.dart';
 import 'package:game/utilities/text_styles.dart';
 import 'package:get/get.dart';
 import 'package:game/config/constants/colors.dart';
@@ -35,9 +36,9 @@ class LoginScreen extends StatelessWidget {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Login', style: AppText.loginHeader),
+                          Text(AppStrings.LOGIN, style: AppText.loginHeader),
                           SizedBox(height: 8),
-                          Text('Please enter your information',
+                          Text(AppStrings.LOGIN_SUBHEADER,
                               style: AppText.loginSubheader),
                           SizedBox(height: 32),
                           TextFormField(
@@ -51,7 +52,7 @@ class LoginScreen extends StatelessWidget {
                             validator: (value) =>
                                 loginController.validateUsername(value),
                             decoration: InputDecoration(
-                              labelText: 'Username',
+                              labelText: AppStrings.USERNAME,
                               labelStyle: TextStyle(
                                 color:
                                     AppColors.primaryVariant.withOpacity(0.5),
@@ -72,7 +73,7 @@ class LoginScreen extends StatelessWidget {
                                 validator: (value) =>
                                     loginController.validatePassword(value),
                                 decoration: InputDecoration(
-                                  labelText: 'Password',
+                                  labelText: AppStrings.PASSWORD,
                                   suffixIcon: IconButton(
                                     icon: Icon(Icons.visibility),
                                     onPressed:
@@ -110,7 +111,7 @@ class LoginScreen extends StatelessWidget {
                                   padding: EdgeInsets.fromLTRB(36, 16, 36, 16),
                                   child: Center(
                                     child: Text(
-                                      'LOGIN',
+                                      AppStrings.LOGIN.toUpperCase(),
                                       style: TextStyle(
                                         color: AppColors.white,
                                         fontSize: 16,
